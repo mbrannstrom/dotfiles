@@ -138,7 +138,7 @@ CreateLink .zprofile
 CreateLink .zlogin
 CreateDir  .zsh
 CreateLink .zsh/prompt.sh
-CreateLink .zsh/git-prompt
+CreateLink .zsh/zsh-git-prompt
 CreateLink .cvsrc
 CreateLink .gitconfig
 CreateLink .inetrc
