@@ -1,0 +1,8 @@
+log -N
+commit -l
+update -d -P
+cvs -q -z3
+diff -u
+rdiff -u
+checkout -P
+tag -c

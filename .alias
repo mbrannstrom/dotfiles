@@ -1,0 +1,8 @@
+alias isr="ps aux | grep -i"
+#alias rmb="find . -not -path '*/.snapshot*' -name '*~' -exec rm {} ';'"
+alias rmb="find . -name '*~' -exec rm {} ';'; find . -name '.#*' -exec rm {} ';'"
+alias ls="ls -F"
+alias l="ls -la"
+alias gitclean="git clean -fdx && rm -rf \`git status --porcelain | grep '^??' | sed 's/^?? //'\` && git status"
+alias gitrst="gitr status -s"
+alias cdpwd="cd `pwd -P`"

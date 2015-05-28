@@ -1,0 +1,7 @@
+#!/bin/bash
+if [[ "$1" == "" ]]
+then
+    echo "Usage: $0 <unix timestamp>"
+    exit
+fi
+echo $(perl -e "print scalar(localtime($1))")

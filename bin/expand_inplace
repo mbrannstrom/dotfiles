@@ -1,0 +1,17 @@
+#!/bin/bash
+set -e
+
+if [[ $# -lt 1 ]]
+then
+    echo "Usage: $0 <file> [... <files>]"
+    exit
+fi
+
+for FILE in $*
+do
+    TMP=$(mktemp -t expand)
+    expand -t 4 $FILE > $TMP
+    mv $FILE $FILE~
+    mv $TMP $FILE
+done
+

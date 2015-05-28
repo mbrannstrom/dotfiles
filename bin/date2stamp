@@ -1,0 +1,7 @@
+#!/bin/bash
+if [[ "$1" == "" ]]
+then
+    echo "Usage: $0 <date>"
+    exit
+fi
+echo $(perl -w -e 'use Date::Parse; print str2time($ARGV[0])' "$1")

@@ -1,0 +1,3 @@
+test -n "$JAVA_HOME"   && launchctl setenv JAVA_HOME   $JAVA_HOME
+test -n "$GROOVY_HOME" && launchctl setenv GROOVY_HOME $GROOVY_HOME
+test -n "$GRADLE_HOME" && launchctl setenv GRADLE_HOME $GRADLE_HOME
