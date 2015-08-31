@@ -1,3 +1,6 @@
 [submodule ".zsh/zsh-git-prompt"]
 	path = .zsh/zsh-git-prompt
 	url = https://github.com/olivierverdier/zsh-git-prompt.git
+[submodule ".emacs.d/distel"]
+	path = .emacs.d/distel
+	url = https://github.com/rost/distel.git
