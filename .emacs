@@ -1,5 +1,3 @@
-(add-to-list 'load-path "~/.emacs.d")
-
 ;; Environment ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; system related paths and stuff goes here
 (load-file "~/.emacs.d/environment.el") 
