@@ -147,13 +147,9 @@ CreateLink .emacs
 CreateDir  .emacs.d
 CreateLink .emacs.d/environment.el
 CreateLink .emacs.d/abbrev.el
-CreateLink .emacs.d/distel
-CreateLink .emacs.d/blink-mode.el
-CreateLink .emacs.d/markdown-mode.el
-CreateLink .emacs.d/grails-mode.el
-CreateLink .emacs.d/groovy-mode.el
-CreateLink .emacs.d/groovy-electric.el
-CreateLink .emacs.d/inf-groovy.el
+CreateLink .emacs.d/blinkprotocol
+CreateLink .emacs.d/markdown
+CreateLink .emacs.d/groovy-emacs-modes
 
 CreateDir  bin
 CreateLink bin/date2stamp

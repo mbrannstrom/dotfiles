@@ -91,12 +91,14 @@
 
 
 ;; Blink protocol ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(add-to-list 'load-path "~/.emacs.d/blinkprotocol/")
 (autoload 'blink-mode "blink-mode" "" t)
 (setq auto-mode-alist       
       (cons '("\\.blink\\'" . blink-mode) auto-mode-alist))
 
 
 ;; Markdown ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(add-to-list 'load-path "~/.emacs.d/markdown/")
 (autoload 'markdown-mode "markdown-mode"
    "Major mode for editing Markdown files" t)
 ;;(add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
@@ -105,18 +107,24 @@
 
 
 ;; Groovy ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; use groovy-mode when file ends in .groovy or has #!/bin/groovy at start
-;;(add-to-list 'load-path "~/.emacs.d/emacs-groovy-mode-mirror")
-;;(autoload 'groovy-mode "groovy-mode" "Major mode for editing Groovy code." t)
-;;(add-to-list 'auto-mode-alist '("\.groovy$" . groovy-mode))
-;;(add-to-list 'auto-mode-alist '("\.gradle$" . groovy-mode))
-;;(add-to-list 'interpreter-mode-alist '("groovy" . groovy-mode))
-;;
-;;;;; make Groovy mode electric by default.
-;;(add-hook 'groovy-mode-hook
-;;          '(lambda ()
-;;             (require 'groovy-electric)
-;;             (groovy-electric-mode)))
+; use groovy-mode when file ends in .groovy or has #!/bin/groovy at start
+(add-to-list 'load-path "~/.emacs.d/groovy-emacs-modes")
+(require 'cl)
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(package-initialize)
+
+(autoload 'groovy-mode "groovy-mode" "Major mode for editing Groovy code." t)
+(add-to-list 'auto-mode-alist '("\.groovy$" . groovy-mode))
+(add-to-list 'auto-mode-alist '("\.gradle$" . groovy-mode))
+(add-to-list 'interpreter-mode-alist '("groovy" . groovy-mode))
+
+;;; make Groovy mode electric by default.
+(add-hook 'groovy-mode-hook
+          '(lambda ()
+             (require 'groovy-electric)
+             (groovy-electric-mode)))
 
 ;; global key bindings ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defun rev ()(interactive) (revert-buffer nil t nil))
