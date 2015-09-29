@@ -1,6 +1,6 @@
 ;; Environment ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; system related paths and stuff goes here
-(load-file "~/.emacs.d/environment.el") 
+(load-file "~/.emacs.d/environment.el")
 
 ;; Misc ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;(standard-display-european 1)
@@ -106,16 +106,17 @@
 
 ;; Groovy ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; use groovy-mode when file ends in .groovy or has #!/bin/groovy at start
-(autoload 'groovy-mode "groovy-mode" "Major mode for editing Groovy code." t)
-(add-to-list 'auto-mode-alist '("\.groovy$" . groovy-mode))
-(add-to-list 'auto-mode-alist '("\.gradle$" . groovy-mode))
-(add-to-list 'interpreter-mode-alist '("groovy" . groovy-mode))
-
-;;; make Groovy mode electric by default.
-(add-hook 'groovy-mode-hook
-          '(lambda ()
-             (require 'groovy-electric)
-             (groovy-electric-mode)))
+;;(add-to-list 'load-path "~/.emacs.d/emacs-groovy-mode-mirror")
+;;(autoload 'groovy-mode "groovy-mode" "Major mode for editing Groovy code." t)
+;;(add-to-list 'auto-mode-alist '("\.groovy$" . groovy-mode))
+;;(add-to-list 'auto-mode-alist '("\.gradle$" . groovy-mode))
+;;(add-to-list 'interpreter-mode-alist '("groovy" . groovy-mode))
+;;
+;;;;; make Groovy mode electric by default.
+;;(add-hook 'groovy-mode-hook
+;;          '(lambda ()
+;;             (require 'groovy-electric)
+;;             (groovy-electric-mode)))
 
 ;; global key bindings ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defun rev ()(interactive) (revert-buffer nil t nil))
