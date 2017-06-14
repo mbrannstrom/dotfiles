@@ -6,8 +6,8 @@ export HISTSIZE=10000
 export SAVEHIST=10000
 
 # Java
-export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
-export PATH=$JAVA_HOME/bin:$PATH
+#export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
+#export PATH=$JAVA_HOME/bin:$PATH
 
 # Scala
 export SCALA_HOME=/opt/scala
@@ -41,6 +41,12 @@ export PATH=$PATH:/usr/texbin
 
 # Macports
 export PATH=$PATH:/opt/local/bin
+
+# Google Protobuf compiler
+export PATH=$PATH:/opt/protoc/bin
+
+# Anaconda (Python)
+export PATH=$HOME/anaconda/bin:$PATH
 
 # home/bin
 export PATH=$HOME/bin:$PATH
