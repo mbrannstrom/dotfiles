@@ -157,4 +157,5 @@ CreateLink bin/date2stamp
 CreateLink bin/stamp2date
 CreateLink bin/expand_inplace
 CreateLink bin/emacs
+CreateLink bin/gw
 
