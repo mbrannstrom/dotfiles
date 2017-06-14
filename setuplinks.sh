@@ -150,6 +150,7 @@ CreateLink .emacs.d/abbrev.el
 CreateLink .emacs.d/blinkprotocol
 CreateLink .emacs.d/markdown
 CreateLink .emacs.d/groovy-emacs-modes
+CreateLink .emacs.d/yaml-mode
 
 CreateDir  bin
 CreateLink bin/date2stamp

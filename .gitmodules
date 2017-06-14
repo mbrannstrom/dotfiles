@@ -7,3 +7,6 @@
 [submodule ".emacs.d/groovy-emacs-modes"]
 	path = .emacs.d/groovy-emacs-modes
 	url = https://github.com/Groovy-Emacs-Modes/groovy-emacs-modes.git
+[submodule ".emacs.d/yaml-mode"]
+	path = .emacs.d/yaml-mode
+	url = https://github.com/yoshiki/yaml-mode.git
