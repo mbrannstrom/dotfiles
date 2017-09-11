@@ -46,7 +46,7 @@ export PATH=$PATH:/opt/local/bin
 export PATH=$PATH:/opt/protoc/bin
 
 # Anaconda (Python)
-export PATH=$HOME/anaconda/bin:$PATH
+#export PATH=$HOME/anaconda/bin:$PATH
 
 # home/bin
 export PATH=$HOME/bin:$PATH
