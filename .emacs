@@ -96,6 +96,10 @@
 (setq auto-mode-alist       
       (cons '("\\.blink\\'" . blink-mode) auto-mode-alist))
 
+;; YAML ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(add-to-list 'load-path "~/.emacs.d/yaml-mode/")
+(require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 
 ;; Markdown ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (add-to-list 'load-path "~/.emacs.d/markdown/")
