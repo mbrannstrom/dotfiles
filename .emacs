@@ -90,6 +90,11 @@
 ;(setq mac-option-modifier nil)
 
 
+;; Protobuf ;;
+(add-to-list 'load-path "~/.emacs.d/protobuf-mode/")
+(require 'protobuf-mode)
+(add-to-list 'auto-mode-alist '("\\.proto$" . protobuf-mode))
+
 ;; Blink protocol ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (add-to-list 'load-path "~/.emacs.d/blinkprotocol/")
 (autoload 'blink-mode "blink-mode" "" t)
