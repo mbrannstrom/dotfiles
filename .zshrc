@@ -68,5 +68,8 @@ source ~/.alias
 source ~/.environment
 source ~/.setenv                     # OS X environment variables for apps not launched from a terminal
 
-#source /opt/google-cloud-sdk/path.zsh.inc
-#source /opt/google-cloud-sdk/completion.zsh.inc
+# Google Cloud SDK
+if [ -d "/opt/google-cloud-sdk" ]; then
+    source /opt/google-cloud-sdk/path.zsh.inc
+    source /opt/google-cloud-sdk/completion.zsh.inc
+fi
