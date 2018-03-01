@@ -151,6 +151,7 @@ CreateLink .emacs.d/blinkprotocol
 CreateLink .emacs.d/markdown
 CreateLink .emacs.d/groovy-emacs-modes
 CreateLink .emacs.d/yaml-mode
+CreateLink .emacs.d/protobuf-mode
 
 CreateDir  bin
 CreateLink bin/date2stamp
