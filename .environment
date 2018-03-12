@@ -17,8 +17,8 @@ export PATH=$SCALA_HOME/bin:$PATH
 export SPARK_HOME=/opt/spark-1.5.0-bin-hadoop2.6
 
 # Ant 
-#export ANT_HOME=/opt/ant
-#export PATH=$PATH:$ANT_HOME/bin
+export ANT_HOME=/opt/apache-ant
+export PATH=$PATH:$ANT_HOME/bin
 
 # Maven
 export M2_HOME=/opt/apache-maven
