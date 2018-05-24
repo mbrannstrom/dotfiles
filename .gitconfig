@@ -14,11 +14,11 @@
   lola = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --all
   # Called from the top-level dir. Pull from git://HOST/.
   serv  = daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
-  st    = status --ignore-submodules
+  st    = status #--ignore-submodules
   ci    = commit
   br    = branch
   co    = checkout
-  df    = diff --ignore-submodules
+  df    = diff #--ignore-submodules
   lg    = log -p
   # all new commits after you fetched, with stats, but excluding merges
   lc    = log ORIG_HEAD.. --stat --no-merges
