@@ -30,14 +30,14 @@ export GRADLE_OPTS=-Dorg.gradle.daemon=true
 export PATH=$GRADLE_HOME/bin:$PATH
 
 # CVS
-export CVS_RSH=ssh
-export CVSROOT=:ext:mikael.brannstrom@cvs.cinnober.com:/cvs/platform/
+#export CVS_RSH=ssh
+#export CVSROOT=:ext:mikael.brannstrom@cvs.cinnober.com:/cvs/platform/
 
 # Libtool
 export SED=/usr/bin/sed
 
 # Latex
-export PATH=$PATH:/usr/texbin
+export PATH=$PATH:/Library/TeX/texbin
 
 # Macports
 export PATH=$PATH:/opt/local/bin
