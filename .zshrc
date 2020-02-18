@@ -51,20 +51,42 @@ setopt GlobComplete                  # Complete globbing patterns
 
 
 # Java
-function setjdk() {
-  if [ $# -ne 0 ]; then
-   removeFromPath '/System/Library/Frameworks/JavaVM.framework/Home/bin'
-   if [ -n "${JAVA_HOME+x}" ]; then
-    removeFromPath $JAVA_HOME
-   fi
-   export JAVA_HOME=`/usr/libexec/java_home -v $@`
-   export PATH=$JAVA_HOME/bin:$PATH
-  fi
- }
- function removeFromPath() {
-  export PATH=$(echo $PATH | sed -E -e "s;:$1;;" -e "s;$1:?;;")
- }
-setjdk 11
+function removeFromPath() {
+    export PATH=$(echo $PATH | sed -E -e "s;:$1;;" -e "s;$1:?;;")
+}
+if [ -f "/usr/libexec/java_home" ]; then # Java on MacOS
+    function setjdk() {
+        if [ $# -ne 0 ]; then
+            export JDK=`/usr/libexec/java_home -v $@`
+            removeFromPath '/System/Library/Frameworks/JavaVM.framework/Home/bin'
+            if [ -n "${JAVA_HOME+x}" ]; then
+                removeFromPath $JAVA_HOME
+            fi
+            export JAVA_HOME="$JDK"
+            export PATH=$JAVA_HOME/bin:$PATH
+        else
+            /usr/libexec/java_home -V 2>&1 | grep , | sed -e 's/,.*//' 
+        fi
+    }
+elif [ -d "/usr/lib/jvm" ]; then # Java on Debian/Ubuntu
+    function setjdk() {
+        if [ $# -ne 0 ]; then
+            JDK=`setjdk | grep $1 | head -n 1`
+            if [[ "$JDK" == "" ]]; then
+                echo "Unable to find any JVMs matching version '$1'"
+                return 1
+            else
+                if [ -n "${JAVA_HOME+x}" ]; then
+                    removeFromPath $JAVA_HOME
+                fi
+                export JAVA_HOME="/usr/lib/jvm/$JDK"
+                export PATH=$JAVA_HOME/bin:$PATH
+            fi
+        else
+            update-alternatives --list java | sed -r -e 's;/usr/lib/jvm/([^/]*)/.*;\1;'
+        fi
+    }
+fi
 
 ## Environment variables and aliases
 source ~/.alias
