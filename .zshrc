@@ -1,5 +1,8 @@
 # .zshrc
 
+# enable the default zsh completions!
+autoload -Uz compinit && compinit
+
 ## Prompt
 source ~/.zsh/prompt.sh
 
@@ -61,7 +64,7 @@ function setjdk() {
  function removeFromPath() {
   export PATH=$(echo $PATH | sed -E -e "s;:$1;;" -e "s;$1:?;;")
  }
-setjdk 1.8
+setjdk 11
 
 ## Environment variables and aliases
 source ~/.alias
