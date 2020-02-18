@@ -148,6 +148,7 @@ CreateDir  .emacs.d
 CreateLink .emacs.d/environment.el
 CreateLink .emacs.d/abbrev.el
 CreateLink .emacs.d/blinkprotocol
+CreateLink .emacs.d/gecko-mode
 CreateLink .emacs.d/markdown
 CreateLink .emacs.d/groovy-emacs-modes
 CreateLink .emacs.d/yaml-mode

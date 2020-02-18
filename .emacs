@@ -101,6 +101,12 @@
 (setq auto-mode-alist       
       (cons '("\\.blink\\'" . blink-mode) auto-mode-alist))
 
+;; Gecko protocol ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(add-to-list 'load-path "~/.emacs.d/gecko-mode/")
+(autoload 'gecko-mode "gecko-mode" "" t)
+(setq auto-mode-alist
+      (cons '("\\.gecko\\'" . gecko-mode) auto-mode-alist))
+
 ;; YAML ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (add-to-list 'load-path "~/.emacs.d/yaml-mode/")
 (require 'yaml-mode)
@@ -143,14 +149,19 @@
 (global-set-key '[(meta g)] 'goto-line) ; Goto line
 (global-set-key '[(control backspace)] 'backward-kill-word)
 (custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- '(safe-local-variable-values (quote ((c-hanging-comment-ender-p) (erlang-indent-level . 2) (erlang-indent-level . 4)))))
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages (quote (rnc-mode)))
+ '(safe-local-variable-values
+   (quote
+    ((c-hanging-comment-ender-p)
+     (erlang-indent-level . 2)
+     (erlang-indent-level . 4)))))
 (custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  )
