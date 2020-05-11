@@ -156,17 +156,15 @@
 (global-set-key (kbd "M-_") 'dabbrev-expand) ; M-/ does not work on Mac
 (global-set-key '[(meta g)] 'goto-line) ; Goto line
 (global-set-key '[(control backspace)] 'backward-kill-word)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(groovy-indent-offset 2)
  '(package-selected-packages (quote (dash s rnc-mode)))
- '(safe-local-variable-values
-   (quote
-    ((c-hanging-comment-ender-p)
-     (erlang-indent-level . 2)
-     (erlang-indent-level . 4)))))
+)
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
